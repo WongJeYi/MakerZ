@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content1"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".PrivateGroupChatActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMessage1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:outlineAmbientShadowColor="#FDFDFD"
+        android:outlineSpotShadowColor="#FDFDFD"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textview2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linearlayout1"
+        android:id="@+id/textview2"
+        android:background="@drawable/line_border"
+        android:gravity="bottom"
+        android:textColor="#FDFDFD" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:fitsSystemWindows="true"
+        android:id="@+id/linearlayout1"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textview3"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnclip1"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="#0A0A0A"
+            android:src="@drawable/paperclip"
+            android:scaleType="centerInside"/>
+
+        <!-- The RichContentEditText -->
+        <!-- Notice app:allowedMimeTypes="images"; it is what accepts certain mime types -->
+        <com.gsconrad.richcontentedittext.RichContentEditText
+            android:id="@+id/etMessage1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FDFDFD"
+            android:hint="Enter message"
+            android:textColor="#FDFDFD"
+            android:textColorHint="#FDFDFD"
+            app:allowedMimeTypes="images"/>
+
+        <ImageButton
+            android:id="@+id/microphone1"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="#0A0A0A"
+            android:src="@drawable/microphone"
+            android:scaleType="centerInside"/>
+
+        <ImageButton
+            android:id="@+id/camera1"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="#0A0A0A"
+            android:src="@drawable/camera"
+            android:scaleType="centerInside"/>
+
+
+        <ImageButton
+            android:id="@+id/btnSend1"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="#0A0A0A"
+            android:src="@drawable/button_send"
+            android:scaleType="centerInside"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="8dp"
+        android:gravity="bottom"
+        android:id="@+id/textview3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="590dp"
+        android:background="@drawable/line_border"
+        android:textColor="#FDFDFD" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

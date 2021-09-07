@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_load_description"
+        android:orderInCategory="100"
+        android:title="Description" />
+
+    <item
+        android:id="@+id/action_set_reminder"
+        android:orderInCategory="101"
+        android:title="Set Reminder" />
+    <item
+        android:id="@+id/action_verified"
+        android:orderInCategory="102"
+        android:title="Verified"
+        android:enabled="false"
+        android:visible="false"/>
+    <item
+        android:id="@+id/action_undo_verified"
+        android:orderInCategory="103"
+        android:title="Undo Verified"
+        android:enabled="false"
+        android:visible="false"/>
+    <item
+        android:id="@+id/action_delete"
+        android:orderInCategory="103"
+        android:title="Delete"
+        android:enabled="false"
+        android:visible="false"/>
+</menu>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+
+    <EditText
+        android:id="@+id/group_chat_name"
+        android:layout_width="370dp"
+        android:hint="e.g Project Z, MakerZ so cool, etc..."
+        android:layout_height="wrap_content" />
+
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:hint="Type:"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/radio_private"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Private"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/radio_public"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:text="Public"
+            android:textSize="20sp"/>
+
+
+    </RadioGroup>
+
+</RelativeLayout>

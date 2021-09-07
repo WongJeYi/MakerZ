@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@drawable/wall"
+    android:orientation="vertical"
+    tools:context=".MakerZ2Activity">
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="20dp"
+        android:background="@drawable/line_border_1"
+        android:textColor="#FDFDFD"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="MakerZ Committee (2018/19)"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="24dp" />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="20dp"
+        android:background="@drawable/line_border_top"
+        android:textColor="#FDFDFD"/>
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="8dp"
+        android:background="@drawable/line_border_1"
+        android:textColor="#FDFDFD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/chairperson"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="7dp"
+        android:background="@drawable/line_border_1"
+        android:textColor="#FDFDFD" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/vicechairperson"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="7dp"
+        android:background="@drawable/line_border_1"
+        android:textColor="#FDFDFD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/secretary"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="7dp"
+        android:background="@drawable/line_border_1"
+        android:textColor="#FDFDFD" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/treasurer"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="7dp"
+        android:background="@drawable/line_border_1"
+        android:textColor="#FDFDFD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/head_of_training"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="7dp"
+        android:background="@drawable/line_border_1"
+        android:textColor="#FDFDFD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/head_of_project"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="7dp"
+        android:background="@drawable/line_border_1"
+        android:textColor="#FDFDFD" />
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/head_of_inventory"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="18dp" />
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="7dp"
+        android:background="@drawable/line_border_1"
+        android:textColor="#FDFDFD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/head_of_media"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="7dp"
+        android:background="@drawable/line_border_1"
+        android:textColor="#FDFDFD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/creative_director"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="7dp"
+        android:background="@drawable/line_border_1"
+        android:textColor="#FDFDFD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/design_consultant"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="18dp" />
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="7dp"
+        android:background="@drawable/line_border_1"
+        android:textColor="#FDFDFD" />
+
+    <Button
+        android:id="@+id/button_back2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/back"
+        android:background="@drawable/black_white_bg_bordered_button"
+        android:textColor="#FDFDFD"
+        />
+
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.makerz.MakerZActivity">
+
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="20dp"
+        android:background="@drawable/line_border"
+        android:textColor="#FDFDFD"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:text="@string/about_makerz"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="28dp" />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="20dp"
+        android:background="@drawable/line_border_top"
+        android:textColor="#FDFDFD"/>
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        app:srcCompat="@drawable/logo"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/founded"
+        android:textSize="26dp"
+        android:textColor="#FDFDFD"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/founded1"
+        android:textSize="26dp"
+        android:textColor="#FDFDFD"
+        />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="20dp"
+        android:background="@drawable/line_border"
+        android:textColor="#FDFDFD"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vision"
+        android:textSize="26dp"
+        android:textColor="#FDFDFD"
+        />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="313dp"
+        android:layout_height="wrap_content"
+        android:text="@string/content"
+        android:textColor="#FDFDFD"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="20dp"
+        android:background="@drawable/line_border"
+        android:textColor="#FDFDFD"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mission"
+        android:paddingLeft="7dp"
+        android:textSize="26dp"
+        android:textColor="#FDFDFD"
+        />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="313dp"
+        android:layout_height="wrap_content"
+        android:text="@string/content1"
+        android:textColor="#FDFDFD"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/button_back1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center|bottom"
+        android:text="@string/back"
+        android:background="@drawable/black_white_bg_bordered_button"
+        android:textColor="#FDFDFD"
+        />
+
+
+
+
+
+</LinearLayout>
+</ScrollView>

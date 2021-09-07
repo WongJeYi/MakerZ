@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="500dp"
+        android:layout_height="20dp"
+        android:background="@drawable/line_border"
+        android:textColor="#FDFDFD"
+        android:layout_marginTop="20dp"
+        android:id="@+id/fstln"
+        />
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/fstln"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:text="@string/privacy_notice"
+        android:textColor="#FDFDFD"
+        android:layout_gravity="center_horizontal"
+        android:textColorHint="#FDFDFD"
+        android:id="@+id/text_title"
+        android:textAlignment="center"
+        android:textSize="28dp" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/text_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="500dp"
+        android:layout_height="20dp"
+        android:background="@drawable/line_border_top"
+        android:id="@+id/sndln"
+        android:textColor="#FDFDFD"/>
+
+    <ImageView
+        app:layout_constraintTop_toBottomOf="@id/sndln"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        app:srcCompat="@drawable/logo"
+        android:id="@+id/logo_pc"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/logo_pc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@android:color/white"
+        android:id="@+id/text_privacy_notice"
+        android:justificationMode="inter_word"
+        android:autoLink="web" />
+    <Button
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/accept"
+        android:layout_marginTop="20dp"
+        android:text="I Accept">
+
+    </Button>
+</androidx.constraintlayout.widget.ConstraintLayout>

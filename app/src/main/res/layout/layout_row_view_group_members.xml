@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1A1919"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:layout_height="70dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageView_group_member"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/profile5" />
+
+        <TextView
+            android:id="@+id/textView_group_members"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="#FDFDFD"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="#FDFDFD"
+            android:textColorHint="#FDFDFD"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView_group_members_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="110dp"
+            android:backgroundTint="#FDFDFD"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#F0E9E9"
+            android:textColorHint="#FDFDFD"
+            tools:text="TextView" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="3dp"
+        android:background="@drawable/line_border_top"
+        android:textColor="#FDFDFD" />
+</RelativeLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ViewGroupMembers">
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="8dp"
+        android:background="@drawable/line_border"
+        android:textColor="#FDFDFD" />
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:id="@+id/add_participants"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_person_add_black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Add Participants"
+        android:textSize="30sp"
+        android:textColor="#FDFDFD" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="500dp"
+        android:layout_marginTop="55dp"
+        android:layout_height="8dp"
+        android:background="@drawable/line_border"
+        android:textColor="#FDFDFD" />
+
+    <TextView
+        android:id="@+id/participants_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="7dp"
+        android:text="0 member"
+        android:textColor="#FDFDFD" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_group_members"
+        android:layout_width="match_parent"
+        android:layout_height="437dp"
+        android:layout_marginTop="100dp"
+        android:outlineAmbientShadowColor="#FDFDFD"
+        android:outlineSpotShadowColor="#FDFDFD"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD">
+     </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+   <!--     <TextView
+            android:layout_width="500dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="550dp"
+            android:layout_toTopOf="@id/exit_group"
+            android:background="@drawable-xxhdpi/line_border"
+            android:textColor="#FDFDFD" />-->
+
+
+        <LinearLayout
+            android:id="@+id/exit_group"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_exit_to_app_black"/>
+
+            <TextView
+                android:id="@+id/leave_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exit Group"
+                android:layout_marginLeft="10dp"
+                android:textColor="#FDFDFD"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="500dp"
+            android:layout_height="8dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/line_border"
+            android:textColor="#FDFDFD" />
+
+    </RelativeLayout>
+
+
+
+
+</FrameLayout>
+
+
+
+
+
+</LinearLayout>

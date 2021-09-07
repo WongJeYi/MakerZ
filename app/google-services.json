@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "381387888251",
+    "firebase_url": "https://makerz-cd0d4.firebaseio.com",
+    "project_id": "makerz-cd0d4",
+    "storage_bucket": "makerz-cd0d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381387888251:android:7fd7b98f1e353404",
+        "android_client_info": {
+          "package_name": "com.makerz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381387888251-r39t7kfjbsic81bs9qpbb8vrk8ic2cr3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.makerz",
+            "certificate_hash": "4fb668ecbe216ae82d10a28119d3cffc71db88ec"
+          }
+        },
+        {
+          "client_id": "381387888251-l8q3g7kkl981cpn25ub2196d7jtltnss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdb1QLG6RIo2MldQgbwCJuh2Om-z1mDCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381387888251-l8q3g7kkl981cpn25ub2196d7jtltnss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

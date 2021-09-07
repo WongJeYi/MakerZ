@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+   >
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="3dp"
+        android:paddingTop="7dp"
+        android:background="@drawable/line_border_top"
+        android:textColor="#FDFDFD"
+        android:theme="@style/FullscreenActionBarStyle"/>
+
+    <item
+        android:id="@+id/add_group"
+        android:icon="@drawable/ic_add"
+        android:title="Create New Group"
+        android:background="#000000"></item>
+
+    <item
+        android:id="@+id/view_group"
+        android:icon="@drawable/ic_group_work"
+        android:title="View Group"
+        android:background="#000000"></item>
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        android:background="#000000"></item>
+
+    <item
+        android:id="@+id/button_backz3"
+        android:icon="@drawable/ic_back"
+        android:title="Back"
+        android:background="#000000"></item>
+
+</menu>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.makerz.RegisterActivity"
+    android:background="@drawable/background">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        app:srcCompat="@drawable/logo"
+        android:layout_marginTop="40dp"
+        />
+
+
+
+    <EditText
+        android:id="@+id/name"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:drawableLeft="@drawable/ic"
+        android:hint="@string/name"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:backgroundTint="#FDFDFD"
+        />
+
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="78dp"
+            android:hint=" "
+            android:paddingRight="8dp"
+            android:textColor="#FDFDFD"
+            android:textSize="20sp"
+            app:counterEnabled="true"
+            app:counterMaxLength="20"
+            app:counterTextAppearance="@style/TextLimitStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_codename"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:backgroundTint="#FDFDFD"
+                android:drawableLeft="@drawable/username"
+                android:hint="@string/codename"
+                android:maxLength="20"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FDFDFD"
+                android:textSize="20sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/edittext_email"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:backgroundTint="#FDFDFD"
+        android:drawableLeft="@drawable/ic_email_black"
+        android:layout_marginLeft="4dp"
+        android:hint="@string/heriot_watt_email_address"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="20sp" />
+
+
+
+    <EditText
+
+        android:inputType="textPassword"
+        android:id="@+id/edittext_password"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@drawable/lock"
+        android:hint="@string/password"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:backgroundTint="#FDFDFD"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/edittext_re_password"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#FDFDFD"
+        android:drawableLeft="@drawable/lock"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="20sp" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="15dp"
+        android:text="@string/password_must_be_at_least_6_characters"
+        android:textColor="#FDFDFD"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="22dp"
+        android:text="@string/codename_not_changeable"
+        android:textColor="#FDFDFD"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginStart="-21dp"
+        android:text="@string/not_changeable"
+        android:textColor="#FDFDFD"
+        android:textSize="10sp" />
+
+
+
+
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="16dp"
+        android:text="Register"
+        android:background="#4E4848"
+        android:textColor="#FDFDFD"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_registered"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="34dp"
+            android:textColor="#FDFDFD"
+            />
+
+        <TextView
+            android:id="@+id/textview_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="5dp"
+            android:text="@string/login"
+            android:textColor="#FDFDFD"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

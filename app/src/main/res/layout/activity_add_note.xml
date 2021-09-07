@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/boss_layout"
+    tools:context=".AddNoteActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/event_thumbnail"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginLeft="152dp"
+            android:layout_marginTop="40dp"
+            android:background="@null"
+            android:clickable="true"
+            android:focusable="false"
+            android:scaleType="fitXY"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/choose_image" />
+
+        <TextView
+            android:id="@+id/event_img_url"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="168dp"
+            android:layout_marginTop="148dp"
+            android:text="Add Image"
+            android:textColor="#FDFDFD"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/event_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="124dp"
+            android:layout_marginTop="188dp"
+            android:backgroundTint="#FDFDFD"
+            android:drawableLeft="@drawable/event"
+            android:hint="Event Name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="#FDFDFD"
+            android:textColorHint="#FDFDFD"
+            android:textSize="20sp"
+            app:counterMaxLength="32"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="63dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="248dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Type:"
+                    android:textColorHint="#FDFDFD"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_contest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:backgroundTint="#FDFDFD"
+                    android:buttonTint="#FDFDFD"
+                    android:text="contest"
+                    android:textColor="#FDFDFD"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_trip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:backgroundTint="#FDFDFD"
+                    android:buttonTint="#FDFDFD"
+                    android:text="trip"
+                    android:textColor="#FDFDFD"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:buttonTint="#FDFDFD"
+                    android:text="activity"
+                    android:textColor="#FDFDFD"
+                    android:textSize="20sp" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="308dp"
+            android:hint=" "
+            android:paddingRight="8dp"
+            android:textColor="#FDFDFD"
+            android:textSize="20sp"
+            app:counterEnabled="true"
+            app:counterTextAppearance="@style/TextLimitStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/event_url"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:backgroundTint="#FDFDFD"
+                android:drawableLeft="@drawable/website"
+                android:hint="Website url"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FDFDFD"
+                android:textSize="20sp"
+                app:counterMaxLength="32" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="384dp"
+            android:hint=" "
+            android:paddingRight="8dp"
+            android:textColor="#FDFDFD"
+            android:textSize="20sp"
+            app:counterEnabled="true"
+            app:counterTextAppearance="@style/TextLimitStyle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/event_deadline"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:backgroundTint="#FDFDFD"
+                android:drawableLeft="@drawable/deadline"
+                android:focusable="false"
+                android:hint="Event deadline"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FDFDFD"
+                android:textSize="20sp"
+                app:counterMaxLength="32" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="78dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="444dp"
+            android:hint=" "
+            android:paddingRight="8dp"
+            android:textColor="#FDFDFD"
+            android:textSize="20sp"
+            app:counterEnabled="true"
+            app:counterTextAppearance="@style/TextLimitStyle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/event_time"
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:backgroundTint="#FDFDFD"
+                android:focusable="false"
+                android:drawableLeft="@drawable/start_time"
+                android:hint="start time"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FDFDFD"
+                android:textSize="20sp"
+                app:counterMaxLength="32" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="78dp"
+            android:layout_marginTop="444dp"
+            android:hint=" "
+            android:paddingRight="8dp"
+            android:textColor="#FDFDFD"
+            android:textSize="20sp"
+            app:counterEnabled="true"
+            app:counterTextAppearance="@style/TextLimitStyle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/event_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:backgroundTint="#FDFDFD"
+                android:drawableLeft="@drawable/end_time"
+                android:focusable="false"
+                android:hint="end time"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FDFDFD"
+                android:textSize="20sp"
+                app:counterMaxLength="32" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="524dp"
+            android:hint=" "
+            android:paddingRight="8dp"
+            android:textColor="#FDFDFD"
+            android:textSize="20sp"
+            app:counterEnabled="true"
+            app:counterTextAppearance="@style/TextLimitStyle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/event_description"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:backgroundTint="#FDFDFD"
+                android:drawableLeft="@drawable/chat"
+                android:hint="Describe the Event"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FDFDFD"
+                android:textSize="20sp"
+                app:counterMaxLength="32" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="152dp"
+            android:layout_marginTop="596dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/button_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="#4E4848"
+                android:text="Set"
+                android:textColor="#FDFDFD" />
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
