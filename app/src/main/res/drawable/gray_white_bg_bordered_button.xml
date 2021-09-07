@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:bottom="1dp"
+        android:drawable="@drawable/gray_white_bg_bordered"
+        android:top="1dp"/>
+</selector>

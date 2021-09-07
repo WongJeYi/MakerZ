@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.makerz.EditActivity">
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="20dp"
+        android:background="@drawable/line_border"
+        android:textColor="#FDFDFD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:text="@string/update_profile"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="28dp" />
+
+    <TextView
+        android:layout_width="508dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line_border_top"
+        android:textColor="#FDFDFD" />
+
+
+    <ImageView
+        android:id="@+id/profile_pic"
+        android:layout_width="144dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="2dp"
+        app:srcCompat="@drawable/profile4" />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/line_border"
+        android:textColor="#FDFDFD" />
+
+
+    <EditText
+        android:id="@+id/name_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:drawableLeft="@drawable/ic"
+        android:hint="@string/name"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="4dp"
+        android:background="@drawable/line_border_top"
+        android:textColor="#FDFDFD" />
+
+
+    <EditText
+        android:id="@+id/codename_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:drawableLeft="@drawable/username"
+        android:hint="Codename                       "
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="20dp" />
+
+
+    <Button
+        android:id="@+id/button_update"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/black_white_bg_bordered_button"
+        android:text="@string/update"
+        android:textColor="#FDFDFD" />
+
+    <Button
+        android:id="@+id/button_back3"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="15dp"
+        android:background="#4E4848"
+        android:text="@string/backz"
+        android:textColor="#FDFDFD" />
+
+</LinearLayout>
+
+
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:elevation="3dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        card_view:cardCornerRadius="@dimen/card_event_radius">
+
+        <ImageView
+            android:id="@+id/post_image"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_margin="5dp"
+            android:adjustViewBounds="true"
+            android:background="@color/colorPrimaryDark"
+            android:scaleType="centerInside" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:scrollbars="none">
+
+            <EditText
+                android:id="@+id/post_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:focusable="false"
+                android:outlineAmbientShadowColor="@color/colorPrimaryDark"
+                android:shadowColor="#000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="1.6"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:background="@android:color/transparent"
+                android:textSize="20dp" />
+        </HorizontalScrollView>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

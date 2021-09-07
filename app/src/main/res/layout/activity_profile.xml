@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context="com.makerz.ProfileActivity">
+
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="20dp"
+        android:background="@drawable/line_border"
+        android:textColor="#FDFDFD"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:text="@string/profile"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:textSize="28dp" />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="20dp"
+        android:background="@drawable/line_border_top"
+        android:textColor="#FDFDFD"/>
+
+
+    <ImageView
+        android:id="@+id/profile_pic_1"
+        android:layout_width="144dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="2dp"
+        app:srcCompat="@drawable/profile3" />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/line_border"
+        android:textColor="#FDFDFD"
+        />
+    <TextView
+        android:id="@+id/text_codename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/codenamez"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:textSize="20dp"
+        android:textColor="#FDFDFD"/>
+
+
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="2dp"
+        android:background="@drawable/line_border_top"
+        android:textColor="#FDFDFD" />
+
+    <TextView
+        android:id="@+id/text_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/emailz"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:textSize="20dp"
+        android:textColor="#FDFDFD"
+        />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="3dp"
+        android:background="@drawable/line_border_top"
+        android:textColor="#FDFDFD" />
+
+    <Button
+        android:id="@+id/button_edit"
+        android:layout_width="62dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/black_white_bg_bordered_button"
+        android:text="@string/edit"
+        android:textColor="#FDFDFD" />
+
+    <Button
+        android:id="@+id/button_change_password"
+        android:layout_width="167dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/black_white_bg_bordered_button"
+        android:text="@string/change_password"
+        android:textColor="#FDFDFD" />
+
+    <Button
+        android:id="@+id/button_backz"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="2dp"
+        android:text="@string/backz"
+        android:background="#4E4848"
+        android:textColor="#FDFDFD"
+        />
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/parentLayout"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.makerz.ListMakerZActivity">
+
+
+    <TextView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="23dp"
+        android:layout_width="500dp"
+        android:layout_height="4dp"
+        android:background="@drawable/line_border_top"
+        android:textColor="#FDFDFD" />
+
+    <TextView
+        android:id="@+id/makerz_list_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FDFDFD"
+        android:paddingTop="33dp"
+        android:text="@string/list_page"
+        android:textColor="#FDFDFD"
+        android:textColorHint="#FDFDFD"
+        android:paddingBottom="10dp"
+        android:textSize="19dp" />
+
+    <TextView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/makerz_list_title"
+        android:layout_width="500dp"
+        android:layout_height="3dp"
+        android:background="@drawable/line_border_top"
+        android:textColor="#FDFDFD" />
+
+    <ListView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_refresh_list"
+        android:id="@+id/listView"
+        android:layout_marginBottom="26dp"
+        android:layout_width="fill_parent"
+        android:layout_height="477dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <TextView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_refresh_list"
+        android:layout_width="500dp"
+        android:layout_height="3dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/line_border_top"
+        android:textColor="#FDFDFD" />
+
+    <Button
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_backz2"
+        android:id="@+id/button_refresh_list"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/black_white_bg_bordered_button"
+        android:text="@string/refresh_list"
+        android:textColor="#FDFDFD" />
+
+    <Button
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/button_backz2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/backz"
+        android:background="#4E4848"
+        android:textColor="#FDFDFD"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

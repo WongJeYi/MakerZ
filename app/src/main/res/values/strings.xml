@@ -1,0 +1,136 @@
+<resources>
+    <string name="app_name">MakerZ</string>
+    <string name="codename">Codename</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="not_registered">Not Registered?</string>
+    <string name="register">Register</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="nothing">                             </string>
+
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="password_forgot">Forgot Password?</string>
+    <string name="text1">We just need your registered email ID to send you</string>
+    <string name="text2">the instructions for password reset.</string>
+    <string name="heriot_watt_email_address">   Heriot-Watt Email Address</string>
+    <string name="confirm">Confirm</string>
+    <string name="back"><![CDATA[<<Back]]></string>
+
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="name">Full Name (IC/Passport)</string>
+    <string name="gender"> Gender: </string>
+    <string name="none">    </string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="date_of_birth"> Date of Birth</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_registered">Already Registered?</string>
+    <string name="password_must_be_at_least_6_characters">*Password must be at least 6 characters.</string>
+    <string name="codename_not_changeable">*Codename is not changeable once you have</string>
+    <string name="not_changeable">registered successfully.</string>
+    <string name="login">Login</string>
+    <string name="title_activity_maker_z">MakerZActivity</string>
+
+    <string name="about_makerz">About MakerZ</string>
+    <string name="founded">Founded by Dr. Hoo Choon Lih</string>
+    <string name="founded1">in 2018.</string>
+    <string name="vision">Vision:</string>
+    <string name="content">To provide a platform for students to innovate and think creatively in order to make exciting advancements for the future.</string>
+    <string name="mission">Mission:</string>
+    <string name="content1">We aim to create a community of thinkers and makers that will come together to work on interests and learn from seeking out new experiences. If you have an idea or project that you are really passionate about, we will give you the tools to make your vision become a reality.</string>
+
+    <string name="makerz_committee_2018_19">MakerZ Committee (2018/19)</string>
+    <string name="chairperson"><b>Chairperson: Abid Junaid</b></string>
+    <string name="vicechairperson"><b>Vice Chairperson: Mohd Ezman</b></string>
+    <string name="secretary"><b>Secretary: Lim Jia Jing</b></string>
+    <string name="treasurer"><b>Treasurer: Yeo Yin May</b></string>
+    <string name="head_of_training"><b>Head of Training: Albert Wijaya</b></string>
+    <string name="head_of_project"><b>Head of Project: Hikma Suciwati</b></string>
+    <string name="head_of_inventory"><b>Head of Inventory: Tang Quak Lu</b></string>
+    <string name="head_of_media"><b>Head of Media: Lai Chun Haw</b></string>
+    <string name="creative_director"><b>Creative Director: Tutlingen Budiarso</b></string>
+    <string name="design_consultant"><b>Design Consultant: Adiba Shahrul Baharin</b></string>
+
+    <string name="edit">Edit</string>
+    <string name="change_password">Change password</string>
+    <string name="profile">Profile</string>
+    <string name="codenamez">Codename:</string>
+    <string name="date_of_birthz">Date of Birth:</string>
+    <string name="emailz">Email:</string>
+    <string name="backz">Back</string>
+
+    <string name="update">Update</string>
+    <string name="update_profile">Profile Update</string>
+
+    <string name="menu">Menu</string>
+
+
+    <string name="list_page">List of MakerZ Members (2019/2020)</string>
+
+
+    <string name="refresh_list">Refresh</string>
+
+
+    <string name="content_page">Content Page</string>
+    <string name="activity">Activity</string>
+    <string name="contest">Contest</string>
+    <string name="trip">Trip</string>
+
+
+    <string name="chat">Chat</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="back_button">Back</string>
+    <string name="blank"> </string>
+    <string name="username">username</string>
+    <string name="material_calendar_monday">M</string>
+    <string name="material_calendar_tuesday">T</string>
+    <string name="material_calendar_wednesday">W</string>
+    <string name="material_calendar_thursday">T</string>
+    <string name="material_calendar_friday">F</string>
+    <string name="material_calendar_saturday">S</string>
+    <string name="material_calendar_sunday">S</string>
+    <array name="material_calendar_months_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </array>
+    <string name="material_calendar_today_button">Today</string>
+    <string name="material_calendar_positive_button">OK</string>
+    <string name="material_calendar_negative_button">Cancel</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="facebook_app_id">321464205661942</string>
+
+    <string name="facebook_access_token">EAAEkXrfJVvYBAJLZCaF8dLFvMmdDUxUlFYAUK8XZC8Pr5YSqxGvTZClK0hn7pbV4pumyxN2AuN380LOZBJ5ClZA1jg3uN7RG5A1dPFvxmLRnifFL4ASPNPqzwOFHF63wyeZCBkPWJOzG57ISBSx4Qivlyx7nDWpSBQHbKUuS69swZDZD</string>
+    <string name="facebook_user_id">733656774142170</string>
+
+    <string name="fb_login_protocol_scheme">fb321464205661942</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_zoom_picture">ZoomPictureActivity</string>
+    <string name="privacy_notice">Privacy Notice for MakerZ</string>
+    <string name="list_admin">Admin List</string>
+    <string name="add_admin">Add</string>
+    <string name="remove_admin">Remove</string>
+    <string name="add">Add</string>
+    <string name="password_old">Old Password</string>
+    <string name="msg_subscribe_failed">Failed to subscribe</string>
+    <string name="msg_subscribed">Subscribed to topic</string>
+    <string name="msg_unsubscribed">Unsubscribed topic</string>
+    <string name="msg_unsubscribe_failed">Failed to unsubscribe</string>
+    <string name="default_notification_channel_id">channel1</string>
+
+</resources>

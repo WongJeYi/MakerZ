@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Shadow Layers-->
+
+    <item>
+        <rotate
+            android:fromDegrees="-35"
+            android:pivotX="0%"
+            android:pivotY="0%"
+            android:toDegrees="0">
+            <shape android:shape="rectangle">
+                <corners android:radius="4dp"/>
+                <padding
+                    android:bottom="1px"
+                    android:left="1px"
+                    android:right="1px"/>
+                <solid android:color="#01000000" />
+                <stroke android:width="2dp"
+                    android:color="#D6CBCB"/>
+            </shape>
+        </rotate>
+    </item>
+    <item android:left="8dp">
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="1px"
+                android:left="1px"
+                android:right="1px"/>
+            <solid android:color="#01000000" />
+            <stroke android:width="2dp"
+                android:color="#D6CBCB"/>
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+
+    <!--===============-->
+    <item>
+        <rotate
+            android:fromDegrees="-35"
+            android:pivotX="0%"
+            android:pivotY="0%"
+            android:toDegrees="0">
+            <shape android:shape="rectangle">
+                <corners android:radius="4dp"/>
+                <padding
+                    android:bottom="1px" />
+                <solid android:color="#09000000" />
+                <stroke android:width="2dp"
+                    android:color="#D6CBCB"/>
+            </shape>
+        </rotate>
+    </item>
+    <item android:left="8dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="90"
+                android:startColor="#312F2F"
+                android:endColor="#33050505"
+                android:type="linear"/>
+            <padding
+                android:bottom="1px" />
+            <solid android:color="#09000000" />
+            <corners android:radius="8dp" />
+            <stroke android:width="2dp"
+                android:color="#D6CBCB"/>
+        </shape>
+    </item>
+
+    <!--===============-->
+
+    <item>
+        <rotate
+            android:fromDegrees="-35"
+            android:pivotX="0%"
+            android:pivotY="0%"
+            android:toDegrees="0">
+            <shape android:shape="rectangle">
+                <corners android:radius="4dp"/>
+                <padding
+                    android:bottom="1px"
+                    android:left="1px"
+                    android:right="1px"/>
+                <solid android:color="#10000000" />
+                <stroke android:width="2dp"
+                    android:color="#D6CBCB"/>
+            </shape>
+        </rotate>
+    </item>
+    <item android:left="8dp">
+        <shape android:shape="rectangle"
+            >
+            <padding
+                android:bottom="1px"
+                android:left="1px"
+                android:right="1px"/>
+            <solid android:color="#10000000" />
+            <stroke android:width="20dp"
+                android:color="#D6CBCB"/>
+            <stroke android:width="2dp"
+                android:color="#D6CBCB"/>
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+
+    <!--ForeGround-->
+
+    <item>
+        <rotate
+            android:fromDegrees="-35"
+            android:pivotX="0%"
+            android:pivotY="0%"
+            android:toDegrees="0">
+            <shape android:shape="rectangle">
+                <corners android:radius="4dp"/>
+                <solid android:color="#2C2B2B" />
+                <stroke android:width="2dp"
+                    android:color="#D6CBCB"/>
+            </shape>
+        </rotate>
+    </item>
+    <item android:left="8dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1B1A1A" />
+            <corners android:radius="8dp" />
+            <stroke android:width="2dp"
+                android:color="#D6CBCB"/>
+        </shape>
+    </item>
+
+</layer-list>

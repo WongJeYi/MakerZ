@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myDrawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:theme="@style/FullscreenTheme"
+    tools:context="com.makerz.ChatActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/textview4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#000000"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:popupTheme="@style/Theme.AppCompat.Light"></androidx.appcompat.widget.Toolbar>
+
+            <FrameLayout
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:outlineAmbientShadowColor="#FDFDFD"
+                        android:outlineSpotShadowColor="#FDFDFD"
+                        android:textColor="#FDFDFD"
+                        android:textColorHint="#FDFDFD">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </FrameLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="500dp"
+            android:layout_height="8dp"
+            android:background="@drawable/line_border"
+            android:gravity="bottom"
+            android:textColor="#FDFDFD"
+            android:id="@+id/textview4"
+            app:layout_constraintBottom_toTopOf="@id/layoutchatbox"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/layoutchatbox"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:fitsSystemWindows="true"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toTopOf="@id/textview1"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <ImageButton
+                android:id="@+id/btnclip"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="#0A0A0A"
+                android:src="@drawable/paperclip"
+                android:scaleType="centerInside"/>
+
+            <!-- The RichContentEditText -->
+            <!-- Notice app:allowedMimeTypes="images"; it is what accepts certain mime types -->
+            <com.gsconrad.richcontentedittext.RichContentEditText
+                android:id="@+id/etMessage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#FDFDFD"
+                android:hint="Enter message"
+                android:textColor="#FDFDFD"
+                android:textColorHint="#FDFDFD"
+                app:allowedMimeTypes="images" />
+
+            <ImageButton
+                android:id="@+id/microphone"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="#0A0A0A"
+                android:src="@drawable/microphone"
+                android:scaleType="centerInside"/>
+
+            <ImageButton
+                android:id="@+id/camera"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="#0A0A0A"
+                android:src="@drawable/camera"
+                android:scaleType="centerInside"/>
+
+
+            <ImageButton
+                android:id="@+id/btnSend"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="#0A0A0A"
+                android:src="@drawable/button_send"
+                android:scaleType="centerInside"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="500dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="590dp"
+            android:background="@drawable/line_border"
+            android:gravity="bottom"
+            android:textColor="#FDFDFD"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#000000"
+        android:gravity="left|start"
+        app:headerLayout="@layout/my_header"
+        app:itemIconTint="#FFF"
+        app:itemTextColor="#FFF"
+        app:menu="@menu/menu">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="115dp"
+            android:background="@drawable/line_border_top"
+            android:textColor="#AAA5A5" />
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
