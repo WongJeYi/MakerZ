@@ -22,6 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+import com.makerz.ChatActivity;
 import com.makerz.PrivateGroupChatActivity;
 import com.makerz.R;
 
@@ -42,48 +43,35 @@ public class MyFirebaseMessaging extends com.google.firebase.messaging.FirebaseM
     private String userId;
     private FirebaseAuth firebaseAuth;
     private String codename;
-    private String[] retImage= {"default_image"};;
+    private String Image;
+    private static Intent intent;
+    private String channel_id;
 
     @Override
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
         Map<String,String> data = remoteMessage.getData();
-        generateNotification(data,remoteMessage.getNotification().getBody(),remoteMessage.getNotification().getTitle());
-        Log.e("Notification",remoteMessage.getNotification().getBody()+remoteMessage.getNotification().getTitle());
+        String from=remoteMessage.getFrom();
+        generateNotification(from,data,remoteMessage.getNotification().getBody(),remoteMessage.getNotification().getTitle());
+        Log.e("Notification",remoteMessage.getFrom()+remoteMessage.getNotification().getBody()+remoteMessage.getNotification().getTitle());
     }
 
-    private void generateNotification(Map<String,String> data,String body, String title) {
-
-        Intent intent = new Intent(MyFirebaseMessaging.this, PrivateGroupChatActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
-
-        myRef = FirebaseDatabase.getInstance().getReference();
-        firebaseAuth = FirebaseAuth.getInstance();
-
-        if(firebaseAuth.getCurrentUser()!=null) {
-            userId = firebaseAuth.getCurrentUser().getUid();
-            DatabaseReference reference = myRef.child("Users").child(userId);
-            reference.addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    codename = snapshot.child("codename").getValue().toString();
-                    if (snapshot.exists()) {
-                        if (snapshot.hasChild("Images")) {
-                            retImage[0] = snapshot.child("Images").getValue().toString();
-                        }
-                    }
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
-            });
+    private void generateNotification(String from,final Map<String,String> data,String body, String title) {
+        if(from.equals("/topics/"+getString(R.string.main_chat)+"MakerZ")){
+            intent = new Intent(MyFirebaseMessaging.this, ChatActivity.class);
+            channel_id="channel2";
+        }else{
+            intent = new Intent(MyFirebaseMessaging.this, PrivateGroupChatActivity.class);
             intent.putExtra("groupName", data.get("Receiver"));
-            intent.putExtra("visit_user_id", userId);
-            intent.putExtra("visit_user_name", codename);
-            intent.putExtra("visit_image",retImage );
+            channel_id="channel1";
         }
-
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+        firebaseAuth=FirebaseAuth.getInstance();
+        userId=firebaseAuth.getCurrentUser().getUid();
+        codename=data.get("name");
+        Image="default_image";
+        intent.putExtra("visit_user_id", userId);
+        intent.putExtra("visit_user_name", codename);
+        intent.putExtra("visit_image",Image );
         PendingIntent pendingIntent = PendingIntent.getActivity(MyFirebaseMessaging.this,0,intent,
                 PendingIntent.FLAG_ONE_SHOT);
 
@@ -115,7 +103,7 @@ public class MyFirebaseMessaging extends com.google.firebase.messaging.FirebaseM
         }
         NotificationCompat.Builder notificationBuilder;
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            notificationBuilder = new NotificationCompat.Builder(MyFirebaseMessaging.this,"channel2")
+            notificationBuilder = new NotificationCompat.Builder(MyFirebaseMessaging.this,channel_id)
                     .setSmallIcon(R.drawable.makerz)
                     .setContentTitle(title)
                     .setContentText(body)

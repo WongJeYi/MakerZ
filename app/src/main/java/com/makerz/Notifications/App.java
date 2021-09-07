@@ -24,19 +24,19 @@ public class App extends Application {
         {
             NotificationChannel channel1 = new NotificationChannel(
                     CHANNEL_1_ID,
-                    "Channel 1",
+                    "Small Group Chat",
                     NotificationManager.IMPORTANCE_HIGH
             );
 
-            channel1.setDescription("This is Channel 1");
+            channel1.setDescription("You can listen to newest group chat updates.");
 
             NotificationChannel channel2 = new NotificationChannel(
                     CHANNEL_2_ID,
-                    "Channel 2",
+                    "Main Chat",
                     NotificationManager.IMPORTANCE_LOW
             );
 
-            channel2.setDescription("This is Channel 2");
+            channel2.setDescription("You can listen to newest public chat updates.");
 
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel1);

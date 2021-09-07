@@ -177,7 +177,7 @@ public class PrivateGroupChatActivity extends AppCompatActivity {
 
         // Declaration of elements.
         loadingBar = new ProgressDialog(PrivateGroupChatActivity.this);
-
+        loadingBar.setCancelable(false);
         firebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = firebaseAuth.getCurrentUser();
         userId = firebaseAuth.getCurrentUser().getUid();
@@ -1187,21 +1187,33 @@ public class PrivateGroupChatActivity extends AppCompatActivity {
                                     retImage[0] = dataSnapshot.child("Images").getValue().toString();
                                 }
                 if (getIntent() != null && getIntent().getExtras() != null)
-                {
+                {Bundle bundle = getIntent().getExtras();
+                    for(String key:bundle.keySet()){
+                        Log.e("Key",key+bundle.get(key));
+                    }
                     if(getIntent().getExtras().containsKey("groupName")) {
                         currentGroupName = getIntent().getExtras().get("groupName").toString();
                         messageReceiverID = getIntent().getExtras().get("visit_user_id").toString();
                         messageReceiverName = getIntent().getExtras().get("visit_user_name").toString();
                         messageReceiverImage = getIntent().getExtras().get("visit_image").toString();
 
-                    }else {
-                        Bundle bundle = getIntent().getExtras();
+                    }else if(bundle.get("from")!=null & bundle.get("from").equals("/topics/"+getString(R.string.main_chat)+"MakerZ")) {
+                        Intent groupChatIntent = new Intent(PrivateGroupChatActivity.this, ChatActivity.class);
+                        groupChatIntent.putExtra("visit_user_id", userId);
+                        groupChatIntent.putExtra("visit_user_name", currentUser.getCodename());
+                        groupChatIntent.putExtra("visit_image", retImage[0]);
+                        startActivity(groupChatIntent);
+                        finish();
+                    }
+                    else{
+
                         currentGroupName = bundle.get("Receiver").toString();
                         messageReceiverID=userId;
                         messageReceiverName=currentUser.getCodename();
                         messageReceiverImage = retImage[0];
 
                     }
+
 
                 }
                 PrivateGroupChatActivity.this.setTitle(currentGroupName);

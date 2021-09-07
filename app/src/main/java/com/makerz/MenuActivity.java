@@ -208,9 +208,6 @@ public class MenuActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Toast.makeText(MenuActivity.this, "Logout successfully.", Toast.LENGTH_SHORT).show();
                         firebaseAuth.signOut();
-                        MySingleton.deleteCache(MenuActivity.this);
-                        ((ActivityManager) MenuActivity.this.getSystemService(ACTIVITY_SERVICE))
-                                .clearApplicationUserData();
                         finish();
                         startActivity(new Intent(MenuActivity.this, MainActivity.class));
 

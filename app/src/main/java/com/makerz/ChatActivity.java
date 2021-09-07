@@ -51,6 +51,8 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import retrofit2.Call;
+import retrofit2.Callback;
 
 import com.getkeepsafe.taptargetview.TapTarget;
 import com.getkeepsafe.taptargetview.TapTargetView;
@@ -75,8 +77,14 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 import com.gsconrad.richcontentedittext.RichContentEditText;
+import com.makerz.Notifications.APIService;
+import com.makerz.Notifications.Client;
+import com.makerz.Notifications.Notification;
+import com.makerz.Notifications.Response;
+import com.makerz.Notifications.Sender;
 import com.makerz.adapter.MainChatAdapter;
 import com.makerz.model.Message;
+import com.makerz.model.user;
 import com.makerz.util.ExampleDialog;
 import com.makerz.util.FirebaseUtil;
 import com.makerz.util.LoadingDialog;
@@ -122,6 +130,7 @@ public class ChatActivity extends AppCompatActivity implements ExampleDialog.Exa
     private StorageReference imageReference;
     private FirebaseDatabase firebaseDatabase;
     private FirebaseUser currentUser;
+    private user mUser;
     private DatabaseReference databaseReference;
 
     private LinearLayoutManager linearLayoutManager;
@@ -164,6 +173,7 @@ public class ChatActivity extends AppCompatActivity implements ExampleDialog.Exa
     float x1;
 
     File richContentFile;
+    APIService apiService;
     //String type;
     private String[] retImage = {"default_image"};
 
@@ -185,9 +195,11 @@ public class ChatActivity extends AppCompatActivity implements ExampleDialog.Exa
                 android.Manifest.permission.READ_EXTERNAL_STORAGE,
                 android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
         };
+
+        apiService = Client.getRetrofit("https://fcm.googleapis.com/").create(APIService.class);
         //Subscribe to notification
 
-        subscribeToNotification(getString(R.string.chat)+"MakerZ");
+        subscribeToNotification(getString(R.string.main_chat)+"MakerZ");
         if (!hasPermissions(this, PERMISSIONS)) {
             ActivityCompat.requestPermissions(this, PERMISSIONS, PERMISSION_ALL);
         }
@@ -209,7 +221,10 @@ public class ChatActivity extends AppCompatActivity implements ExampleDialog.Exa
 
         // Values passed from MenuActivity / ContentstuffActivity / ViewGroupActivity
         if (getIntent() != null && getIntent().getExtras() != null)
-        {
+        {Bundle bundle = getIntent().getExtras();
+            for(String key:bundle.keySet()){
+            Log.e("Key",key+bundle.get(key));
+        }
             currentGroupName = "MakerZ";
             messageReceiverID = getIntent().getExtras().get("visit_user_id").toString();
             messageReceiverName = getIntent().getExtras().get("visit_user_name").toString();
@@ -719,6 +734,9 @@ public class ChatActivity extends AppCompatActivity implements ExampleDialog.Exa
 
                     if (task.isSuccessful())
                     {
+                        // Getting through here
+                        sendNotification(currentFullName, currentUserName,messageInput);
+
 
                         DatabaseReference database = FirebaseDatabase.getInstance().getReference("Users").child(userId);
                         database.addValueEventListener(new ValueEventListener() {
@@ -1431,5 +1449,34 @@ public class ChatActivity extends AppCompatActivity implements ExampleDialog.Exa
                         Toast.makeText(ChatActivity.this, msg, Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+    private void sendNotification(String fullname, final String codename, final String messageInput) {
+
+        Message data = new Message(userId,codename + ": " + messageInput,"text",currentGroupName,messagePushID,saveCurrentTime, saveCurrentDate, codename);
+        String msg=messageInput;
+        if(messageInput.length()>51){
+            msg = messageInput.substring(0,50)+"...";
+        }
+        Notification notification = new Notification(msg,currentGroupName,".PrivateGroupChatActivity");
+        Sender sender = new Sender(data, "/topics/"+getString(R.string.main_chat)+currentGroupName,notification); // Need to change to get token from all users except the sender
+        // The current one is sender get own notification
+
+        apiService.sendNotification(sender)
+                .enqueue(new Callback<Response>() {
+                    @Override
+                    public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
+
+                        Log.e("TAG_MainGroup",String.valueOf(response.isSuccessful()));
+
+
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<Response> call, Throwable t) {
+
+                    }
+                });
+
     }
 }

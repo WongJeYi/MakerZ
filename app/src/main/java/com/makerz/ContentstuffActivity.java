@@ -131,9 +131,6 @@ public class ContentstuffActivity extends AppCompatActivity implements EventFrag
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Toast.makeText(ContentstuffActivity.this, "Logout successfully.", Toast.LENGTH_SHORT).show();
                         firebaseAuth.signOut();
-                        MySingleton.deleteCache(ContentstuffActivity.this);
-                        ((ActivityManager)ContentstuffActivity.this.getSystemService(ACTIVITY_SERVICE))
-                                .clearApplicationUserData();
                         finish();
                         startActivity(new Intent(ContentstuffActivity.this, MainActivity.class));
 
