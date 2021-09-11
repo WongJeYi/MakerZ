@@ -1272,7 +1272,7 @@ public class ChatActivity extends AppCompatActivity implements ExampleDialog.Exa
         myRef = FirebaseDatabase.getInstance().getReference();
        DatabaseReference reference = myRef.child("Users").child(userId);
 
-       reference.addValueEventListener(new ValueEventListener() {
+       reference.addListenerForSingleValueEvent(new ValueEventListener() {
            @Override
            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
